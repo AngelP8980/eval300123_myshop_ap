@@ -1,0 +1,46 @@
+<div class="text-center pt-3 pb-2">
+    <img src="img/logo.png" alt="MyShop" width="60">
+    <h2 class="my-4">Bienvenue sur My Shop !</h2>
+
+    <h2 class="my-4">Liste des articles en ligne</h2>
+
+
+<table class="table table-striped bg-white">
+<thead>
+<tr>
+  <th scope="col">#id</th>
+  <th scope="col">Titre</th>
+  <th scope="col">Description</th>
+  <th scope="col">Prix</th>
+  <th scope="col">City</th>
+  <th scope="col">Code Postal</th>
+
+</tr>
+</thead>
+<tbody>
+<?php 
+foreach (array_slice($produitData, 0, 15) as $produit) {
+    ?>
+    <tr class="text-break">
+    <th scope="row"><?= $produit->getIdProduit() ?></th>
+    <td><?= strtoupper($produit->getTitle()) ?></td>
+    <td><?= $produit->getDescription() ?></td>
+    <td><?= $produit->getPrice() ?></td>
+    <td><?= $produit->getCity() ?></td>
+    <td><?= $produit->getCP() ?></td>
+    </tr>
+<?php
+}
+?>
+
+</tbody>
+</table>
+
+</div>
+
+
+<!-- Affichage du message flash le cas échéant -->
+<?php if ($flashMessage): ?>
+    <div class="alert alert-success text-center pt-3 pb-4"><?=htmlspecialchars($flashMessage);?></div>
+<?php endif; ?>
+

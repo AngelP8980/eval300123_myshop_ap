@@ -1,0 +1,35 @@
+<!-- Formulaire -->
+<h2>Formulaire</h2>
+<form action="" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="titre">Titre</label>
+            <input class="form-control" type="text" name="title" id="title" placeholder="Titre" maxlength=255 required/>
+        </div>
+
+        <div class="mb-3">
+            <label for="description">Description</label>
+            <textarea class="form-control" type="textarea" name="description" id="description" maxlength=1000 required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="prix">Prix</label>
+            <input class="form-control" type="number" name="price" id="price" placeholder="Prix" required/>
+        </div>
+
+        <div class="mb-3">
+            <label for="ville">Ville</label>
+            <input class="form-control" type="text" name="city" id="city" placeholder="Ville" maxlength=255 required/>
+        </div>
+
+        <div class="mb-3">
+            <label for="postal_code">Code Postal</label>
+            <input class="form-control" type="int" name="postal_code" id="postal_code" placeholder="Code Postal" maxlength=40/>
+        </div>
+
+        
+        <input value="Valider" type="submit" name="submit" class="btn btn-dark"/>
+</form>
+
+<div class="">
+    <?= $flashMessage; ?>
+</div>

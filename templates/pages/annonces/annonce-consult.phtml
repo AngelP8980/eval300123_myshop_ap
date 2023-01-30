@@ -1,0 +1,24 @@
+<!-- Consultation du produit -->
+
+<h2>Article <?= $produitData->getTitle() ?> </h2>
+
+<p>Description : <?= $produitData->getDescription() ?></p>
+<p>Prix : <?= $produitData->getPrice() ?></p>
+<p>Ville : <?= $produitData->getCity() ?></p>
+<p>Code Postal : <?= $produitData->getCP() ?></p>
+
+<form action="" method="POST">
+    <div class="mb-3">
+        <label for="reservation_text">Réservation</label>
+            <textarea name="reservation_text" placeholder="Pour réserver cet article, merci de bien vouloir saisir vos coordonnées afin d'être recontacté." id="" cols="30" rows="10"></textarea>
+    </div>
+    <input value="Je réserve" type="submit" name="submit" class="btn btn-dark"/>
+
+
+</form>
+
+
+
+<div class="">
+    <?= $flashMessage; ?>
+</div>
